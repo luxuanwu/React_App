@@ -1,0 +1,215 @@
+.music-login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 16px;
+  box-sizing: border-box;
+  background:
+    radial-gradient(circle at 18% 12%, rgba(30, 215, 96, 0.22), transparent 28%),
+    linear-gradient(180deg, #1b1b1b 0%, #0f0f0f 45%, #000 100%);
+  color: #fff;
+}
+
+.music-login-panel {
+  width: min(100%, 480px);
+  box-sizing: border-box;
+  padding: 42px 48px 36px;
+  border-radius: 8px;
+  background: #121212;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.48);
+}
+
+.music-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 28px;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.music-brand-mark {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #1ed760;
+  display: grid;
+  place-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.music-brand-mark span {
+  position: absolute;
+  left: 8px;
+  width: 19px;
+  height: 2px;
+  border-radius: 999px;
+  background: #111;
+  transform: rotate(15deg);
+}
+
+.music-brand-mark span:nth-child(1) {
+  top: 11px;
+  width: 20px;
+}
+
+.music-brand-mark span:nth-child(2) {
+  top: 16px;
+  width: 17px;
+}
+
+.music-brand-mark span:nth-child(3) {
+  top: 21px;
+  width: 14px;
+}
+
+.music-login-panel h1 {
+  margin: 0 0 28px;
+  text-align: center;
+  font-size: 32px;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+.music-social-group,
+.music-login-form {
+  display: grid;
+  gap: 12px;
+}
+
+.music-social-button,
+.music-submit-button {
+  width: 100%;
+  min-height: 48px;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.music-social-button {
+  border: 1px solid #727272;
+  background: transparent;
+  color: #fff;
+}
+
+.music-social-button:hover,
+.music-social-button:focus-visible {
+  border-color: #fff;
+}
+
+.music-divider {
+  height: 1px;
+  margin: 32px 0;
+  background: #292929;
+}
+
+.music-field {
+  display: grid;
+  gap: 8px;
+  text-align: left;
+}
+
+.music-field label {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.music-field input {
+  width: 100%;
+  min-height: 48px;
+  box-sizing: border-box;
+  border: 1px solid #727272;
+  border-radius: 4px;
+  padding: 0 14px;
+  background: #121212;
+  color: #fff;
+  font-size: 15px;
+  outline: none;
+}
+
+.music-field input:hover,
+.music-field input:focus {
+  border-color: #fff;
+}
+
+.music-field input::placeholder {
+  color: #a7a7a7;
+}
+
+.music-remember {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 4px 0 2px;
+  color: #e6e6e6;
+  font-size: 14px;
+  text-align: left;
+}
+
+.music-remember input {
+  accent-color: #1ed760;
+}
+
+.music-error {
+  padding: 10px 12px;
+  border-radius: 4px;
+  background: rgba(241, 90, 90, 0.12);
+  color: #ff8f8f;
+  font-size: 14px;
+  text-align: left;
+}
+
+.music-submit-button {
+  margin-top: 8px;
+  border: 0;
+  background: #1ed760;
+  color: #000;
+}
+
+.music-submit-button:hover,
+.music-submit-button:focus-visible {
+  transform: scale(1.01);
+  background: #3be477;
+}
+
+.music-forgot-link,
+.music-signup a {
+  color: #fff;
+  font-weight: 700;
+}
+
+.music-forgot-link {
+  display: inline-block;
+  margin-top: 24px;
+}
+
+.music-signup {
+  margin: 28px 0 0;
+  color: #a7a7a7;
+  text-align: center;
+  font-size: 15px;
+}
+
+@media (max-width: 560px) {
+  .music-login-page {
+    align-items: stretch;
+    padding: 0;
+    background: #121212;
+  }
+
+  .music-login-panel {
+    width: 100%;
+    min-height: 100vh;
+    padding: 28px 24px 34px;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .music-login-panel h1 {
+    font-size: 28px;
+  }
+}
