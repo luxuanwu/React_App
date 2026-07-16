@@ -1,0 +1,372 @@
+.track-detail-shell {
+  min-height: 100vh;
+  position: relative;
+  background: #121212;
+  color: #fff;
+  text-align: left;
+  overflow-x: hidden;
+}
+
+.track-detail-backdrop {
+  position: absolute;
+  inset: 0;
+  height: 420px;
+  background:
+    linear-gradient(180deg, rgba(30, 215, 96, 0.35) 0%, rgba(18, 18, 18, 0.95) 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.track-detail-content {
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 28px 32px 60px;
+}
+
+.track-detail-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+  padding: 8px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.25);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.track-detail-back:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.track-detail-hero {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  gap: 40px;
+  align-items: start;
+  margin-bottom: 48px;
+}
+
+.track-detail-cover {
+  width: 280px;
+  height: 280px;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  background:
+    linear-gradient(135deg, var(--theme-color, #1ed760), #101010);
+  box-shadow:
+    0 24px 60px rgba(0, 0, 0, 0.45),
+    0 0 0 1px rgba(255, 255, 255, 0.06);
+}
+
+.track-detail-cover span {
+  font-size: 120px;
+  font-weight: 900;
+  color: rgba(0, 0, 0, 0.58);
+}
+
+.track-detail-info {
+  display: grid;
+  gap: 18px;
+  padding-top: 8px;
+}
+
+.track-detail-title-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.track-detail-tag {
+  flex: 0 0 auto;
+  padding: 3px 10px;
+  border: 1px solid #ff3a3a;
+  border-radius: 4px;
+  color: #ff3a3a;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.track-detail-info h1 {
+  margin: 0;
+  font-size: 42px;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.track-detail-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+  color: #b3b3b3;
+  font-size: 14px;
+}
+
+.track-detail-artist {
+  color: #1ed760;
+  font-weight: 700;
+}
+
+.track-detail-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.track-detail-actions button {
+  min-height: 40px;
+  padding: 0 22px;
+  border: 0;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform 0.12s ease, filter 0.12s ease;
+}
+
+.track-detail-actions button:hover {
+  transform: scale(1.03);
+  filter: brightness(1.1);
+}
+
+.track-detail-play {
+  background: #1ed760;
+  color: #000;
+}
+
+.track-detail-like {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #535353 !important;
+}
+
+.track-detail-like:hover {
+  border-color: #fff !important;
+}
+
+.track-detail-share,
+  .track-detail-comment {
+  background: #2a2a2a;
+  color: #fff;
+}
+
+.track-detail-counts {
+  display: flex;
+  gap: 20px;
+  color: #9a9a9a;
+  font-size: 13px;
+}
+
+.track-detail-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 40px;
+}
+
+.track-detail-lyrics h2,
+.track-detail-section h2 {
+  margin: 0 0 18px;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.track-detail-lyrics-content {
+  color: #b3b3b3;
+  line-height: 2;
+  font-size: 15px;
+}
+
+.track-detail-lyrics-content p {
+  margin: 0;
+}
+
+.track-detail-section {
+  margin-bottom: 32px;
+}
+
+.track-detail-related {
+  display: grid;
+  gap: 10px;
+}
+
+.related-row {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 46px 1fr;
+  gap: 12px;
+  align-items: center;
+  border: 0;
+  border-radius: 6px;
+  padding: 8px;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.15s ease;
+}
+
+.related-row:hover {
+  background: #232323;
+}
+
+.related-art {
+  width: 46px;
+  height: 46px;
+  border-radius: 4px;
+  display: grid;
+  place-items: center;
+  color: rgba(0, 0, 0, 0.72);
+  font-weight: 900;
+}
+
+.related-info {
+  min-width: 0;
+  display: grid;
+  gap: 4px;
+}
+
+.related-info strong {
+  color: #fff;
+  font-size: 14px;
+}
+
+.related-info small {
+  color: #9a9a9a;
+  font-size: 12px;
+}
+
+.track-detail-comments {
+  display: grid;
+  gap: 16px;
+}
+
+.comment-row {
+  display: grid;
+  grid-template-columns: 38px 1fr;
+  gap: 12px;
+}
+
+.comment-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #2a2a2a;
+  color: #1ed760;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.comment-body {
+  display: grid;
+  gap: 6px;
+}
+
+.comment-body strong {
+  color: #9a9a9a;
+  font-size: 13px;
+}
+
+.comment-body p {
+  margin: 0;
+  color: #ddd;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.comment-likes {
+  color: #9a9a9a;
+  font-size: 12px;
+}
+
+.track-detail-empty {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  place-content: center;
+  gap: 18px;
+  text-align: center;
+}
+
+.track-detail-empty p {
+  margin: 0;
+  color: #b3b3b3;
+  font-size: 18px;
+}
+
+.track-detail-empty button {
+  padding: 10px 24px;
+  border: 0;
+  border-radius: 999px;
+  background: #1ed760;
+  color: #000;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .track-detail-hero {
+    grid-template-columns: 220px minmax(0, 1fr);
+    gap: 28px;
+  }
+
+  .track-detail-cover {
+    width: 220px;
+    height: 220px;
+  }
+
+  .track-detail-cover span {
+    font-size: 90px;
+  }
+
+  .track-detail-info h1 {
+    font-size: 32px;
+  }
+
+  .track-detail-body {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .track-detail-content {
+    padding: 20px 18px 40px;
+  }
+
+  .track-detail-hero {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .track-detail-cover {
+    width: 200px;
+    height: 200px;
+  }
+
+  .track-detail-info {
+    justify-items: center;
+  }
+
+  .track-detail-title-row {
+    justify-content: center;
+  }
+
+  .track-detail-actions {
+    justify-content: center;
+  }
+
+  .track-detail-counts {
+    justify-content: center;
+  }
+}
